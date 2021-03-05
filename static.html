@@ -11,19 +11,15 @@ class Car {
   constructor(brand) {
     this.carname = brand;
   }
-  static hello() {  // static method
+  static hello() { 
     return "Hello!!";
   }
 }
 
 mycar = new Car("Ford");
 
-//Call 'hello()' on the class Car:
 document.getElementById("test").innerHTML = Car.hello();
 
-//and NOT on the 'mycar' object:
-//document.getElementById("demo").innerHTML = mycar.hello();
-//this would raise an error.
 </script>
 
 </body>
