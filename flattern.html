@@ -7,11 +7,11 @@ function flatten(arr) {
   return [].concat(...arr)
 }
 function deepFlat(arr) {
-  return flatten(           // return shalowly flattened array
-    arr.map(x=>             // with each x in array
-      Array.isArray(x)      // is x an array?
-        ? deepFlat(x)    // if yes, return deeply flattened x
-        : x                 // if no, return just x
+  return flatten(           
+    arr.map(x=>             
+      Array.isArray(x)     
+        ? deepFlat(x)    
+        : x                 
     )
   )
 }
