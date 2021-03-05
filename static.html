@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<p>A static method </p>
+
+<p id="test"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  static hello() {  // static method
+    return "Hello!!";
+  }
+}
+
+mycar = new Car("Ford");
+
+//Call 'hello()' on the class Car:
+document.getElementById("test").innerHTML = Car.hello();
+
+//and NOT on the 'mycar' object:
+//document.getElementById("demo").innerHTML = mycar.hello();
+//this would raise an error.
+</script>
+
+</body>
+</html>
