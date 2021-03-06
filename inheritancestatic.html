@@ -1,0 +1,24 @@
+<html>
+    <body>
+    <script>
+class BaseClass {
+   static sayHi(){
+     console.log("Hi!");
+   }
+}
+
+class SubClass extends BaseClass{
+
+}
+
+class SubClass2 extends SubClass{
+
+}
+
+BaseClass.sayHi()   //Hi
+SubClass.sayHi()
+SubClass2.sayHi() //Hi
+
+</script>
+</body>
+</html>
