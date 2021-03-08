@@ -67,15 +67,13 @@ LinkedList.prototype = {
 		return node;
 	},
 	
-	// Some aliases of the above:
+	
 	append: function(data) { this.addLast(data); },
 	prepend: function(data) { this.addFirst(data); },
 	add: function(data) { this.addLast(data); },
 	remove: function(data) { this.removeLast(); },
 	push: function(data) { this.addFirst(data); },
 	pop: function() { return this.removeFirst(); },
-	enqueue: function(data) { this.addLast(data); },
-	dequeue: function() { return this.removeFirst(); },
 	
 	peek: function() { return this._head; },
 	
@@ -111,7 +109,7 @@ LinkedList.prototype = {
 			if (current.next !== null) { console.log(" "); }
 			current = current.next;
 		}
-		console.log(" :TAIL\n");
+		console.log(" :TAIL");
 	},
 	
 	printListBackwards: function() {
@@ -122,7 +120,7 @@ LinkedList.prototype = {
 			if (current.previous !== null) { console.log(""); }
 			current = current.previous;
 		}
-		console.log(" :HEAD \n");
+		console.log(" :HEAD");
 	},
 };
 
@@ -139,12 +137,12 @@ stack.push(parseInt(stack.peek()) + 10);
 stack.push("Charlie");
 stack.push("Delta");
 
-console.log("" + stack.size() + "\n");
+console.log("" + stack.size() );
 stack.printList();
 stack.printListBackwards();
 
-console.log("" + stack.size() + "\n");
-console.log("" + stack.pop() + "\n");
+console.log("" + stack.size() );
+console.log("" + stack.pop());
 
 for (i = 0; i < 10; i++) {
 	if (i%2 == 0) {
@@ -156,7 +154,7 @@ for (i = 0; i < 10; i++) {
 
 stack.printList();
 stack.printListBackwards();
-console.log("" + stack.get(0) + "\n");
+console.log("" + stack.get(0));
 
 console.log("[" + stack.toArray() + "]\n");
 
